@@ -1,0 +1,44 @@
+# Python environments, bytecode, test and lint caches
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.egg-info/
+
+# Local customer configuration and secrets
+config.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Runtime logs, checkpoints and audit/report output
+*.log
+checkpoint.json
+registry-cleaner-actions.csv
+registry-tag-counts.csv
+
+# PyInstaller and distribution output
+build/
+dist/
+release/
+.pyinstaller-build/
+*.spec
+
+# OS and editor metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

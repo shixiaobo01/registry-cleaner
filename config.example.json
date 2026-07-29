@@ -1,0 +1,13 @@
+{
+  "registry_url": "https://registry.customer.example",
+  "username": "registry-user",
+  "password_env": "REGISTRY_PASSWORD",
+  "verify_tls": "/opt/registry-cleaner/registry-ca.crt",
+  "keep_last": 3,
+  "fallback_to_last_modified": true,
+  "skip_repository_prefixes": ["tools/", "base/", "cicd/"],
+  "skip_repositories": [],
+  "protected_tag_patterns": [],
+  "repository_workers": 2,
+  "tag_workers": 12
+}
