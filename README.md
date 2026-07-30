@@ -183,4 +183,4 @@ storage:
 docker exec -it 359c  registry garbage-collect /etc/registry2.yml
 ```
 
-~~  docker exec <registry-container> registry garbage-collect /etc/docker/registry/config.yml ~~ 
+~~~  docker exec <registry-container> registry garbage-collect /etc/docker/registry/config.yml ~~~
