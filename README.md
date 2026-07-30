@@ -89,7 +89,7 @@ head -n 21 registry-tag-counts.csv
 
 ## 清理操作
 
-### 清理单个仓库
+### 清理单个镜像的tag
 
 先演练，默认不会删除：
 
@@ -109,9 +109,9 @@ grep would_delete registry-cleaner-actions.csv | tail -n 30
 ./registry-cleaner --config config.json --repository arm64/gitea --delete
 ```
 
-### 清理 arm64 下的全部仓库
+### 清理 arm64 下的全部镜像的tag
 
-每个 `arm64/*` 仓库会独立保留最新 `keep_last` 个 tag。
+每个 `arm64/*` 镜像会独立保留最新 `keep_last` 个 tag。
 
 ```bash
 # 先演练
@@ -119,6 +119,16 @@ grep would_delete registry-cleaner-actions.csv | tail -n 30
 
 # 确认后实际删除
 ./registry-cleaner --config config.json --repository-prefix arm64/ --delete
+```
+
+### 清理所有命名空间下的镜像tag
+
+```bash
+# 先演练
+./registry-cleaner --config config.json
+
+# 确认后实际删除
+./registry-cleaner --config config.json --delete
 ```
 
 ## 保留规则
