@@ -180,5 +180,7 @@ storage:
 典型 GC 命令：
 
 ```bash
-docker exec <registry-container> registry garbage-collect /etc/docker/registry/config.yml
+docker exec -it 359c  registry garbage-collect /etc/registry2.yml
 ```
+
+~~  docker exec <registry-container> registry garbage-collect /etc/docker/registry/config.yml ~~ 
