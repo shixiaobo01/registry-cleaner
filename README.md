@@ -71,7 +71,7 @@ export REGISTRY_PASSWORD='你的密码'
 
 此操作只读取 tag 列表，不会删除任何数据：
 
-统计仓库中`所有镜像`:
+统计仓库中任何空间下的`所有镜像`:
 ```bash
 ./registry-cleaner --config config.json --report-tags
 ```
@@ -82,16 +82,16 @@ export REGISTRY_PASSWORD='你的密码'
 head -n 21 registry-tag-counts.csv
 ```
 
-只统计 `arm64/`：
+命名空间下所有 `arm64/`：
 
 ```bash
 ./registry-cleaner --config config.json --repository-prefix arm64/ --report-tags
 ```
 
-只统计 `arm64/gitea`：
+只统计单个 `arm64/gitea`：
 
 ```bash
-./registry-cleaner --config config.json --repository-prefix arm64/gitea --report-tags
+./registry-cleaner --config config.json --repository arm64/gitea --report-tags
 ```
 
 ## 清理操作
